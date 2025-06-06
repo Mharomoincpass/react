@@ -1,7 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        navigate("/discovery");
+    }
     return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
-      <button className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+    <div className="h-screen flex items-center justify-center bg-[#16121F]">
+      <button
+        onClick={handleLogin}
+        className="px-6 py-3 bg-[#201c2c] text-white font-bold rounded hover:text-[#201c2c] hover:bg-white">
         Login
       </button>
     </div>
